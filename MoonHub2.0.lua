@@ -17,7 +17,7 @@ else
  game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelaksana | support fluxus,hydrogen,alysse,trigon,vegaX")
  end
     
-local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Arceus X" or SONA_LOADED and "Sona" or "Fluxus" or
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or ArceusX_LOADED and "Arceus X" or SONA_LOADED and "Sona" or "Fluxus" or
 "Fluxus"
                     local HttpService = game:GetService("HttpService")
                      local Data =
