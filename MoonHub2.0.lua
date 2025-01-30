@@ -1,5 +1,6 @@
+assim?
+
 local function getExecutor()
-    -- Se você está usando o Arceus X, por exemplo
     if is_arceus_x then
         return "Arceus X"
     elseif is_delta then
@@ -21,14 +22,14 @@ local support = {
     ["Electron"] = false,
 }
 
-if support[exploit()]  then
+if support[exploit()] then
     print("Correct Executor Let's Run uwu")
 else
- game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelaksana | support fluxus,hydrogen,alysse,trigon,vegaX")
- end
+    game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelaks")
+end
     
-local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Arceus X" or SONA_LOADED and "Sona" or "Fluxus" or
-"Fluxus"
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "KRNL" or SONA_LOADED and "Sona" or "Fluxus" or
+"Arceus X"
                     local HttpService = game:GetService("HttpService")
                      local Data =
                         {
