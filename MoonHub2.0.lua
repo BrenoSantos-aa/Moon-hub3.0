@@ -1,13 +1,4 @@
-local function getExecutor()
-    if is_arceus_x then
-        return "Arceus X"
-    elseif is_delta and is_delta == true then
-        return "Delta"
-    else
-        return "Desconhecido"
-    end
-end
-local exploit = getExecutor
+local exploit = getexecutorname or identifyexecutor
 local support = {
     ["Fluxus"] = true,
     ["Trigon"] = false,
