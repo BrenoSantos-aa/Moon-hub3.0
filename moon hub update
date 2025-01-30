@@ -1,4 +1,4 @@
-local exploit = getExecutor()
+local exploit = getexecutorname or identifyexecutor
 local support = {
     ["Fluxus"] = true,
     ["Trigon"] = false,
@@ -12,7 +12,7 @@ local support = {
 }
 
 if support[exploit()]  then
-    print("Correct Executor Let's Run uwu")
+    print("incorrect Executor Let's Run uwu")
 else
  game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelaksana | support fluxus,hydrogen,alysse,trigon,vegaX")
  end
