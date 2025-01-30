@@ -1,13 +1,13 @@
 local exploit = getexecutorname or identifyexecutor
 local support = {
-    ["Arceus X"] = true,
+    ["Fluxus"] = true,
     ["Trigon"] = false,
     ["Codex"] = true,
     ["Delta"] = true,
     ["Vega X"] = true,
     ["Hydrogen"] = true,
     ["alysse"] = false,
-    ["Fluxus"] = true,
+    ["Arceus X"] = true,
     ["Electron"] = false,
 }
 
