@@ -27,7 +27,7 @@ else
 end
     
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "KRNL" or SONA_LOADED and "Sona" or "Fluxus" or
-"Arceus X"
+"ArceusX"
                     local HttpService = game:GetService("HttpService")
                      local Data =
                         {
