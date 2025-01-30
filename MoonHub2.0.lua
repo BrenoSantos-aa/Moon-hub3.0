@@ -7533,8 +7533,8 @@ OrionLib:MakeNotification(
 
 
 Fluent:Notify({
-    Title = "Nome Do Seu Hub",
-    Content = "Thanks For Using Nome Do Seu Hub",
+    Title = "Moon Hub",
+    Content = "Thanks For Using Moon Hun",
     Duration = 8
 })
 SaveManager:SetLibrary(Fluent)
