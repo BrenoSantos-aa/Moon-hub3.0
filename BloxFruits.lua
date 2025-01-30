@@ -2385,24 +2385,28 @@ end
 
 
 
-function LPH_NO_VIRTUALIZE(func)
-    return func
+local function waitForCombatFramework()
+local player = game.Players.LocalPlayer
+repeat
+wait(0.1) -- Aguarde um pouco antes de tentar novamente
+until player.PlayerScripts:FindFirstChild("CombatFramework")
 end
-function LPH_JIT_MAX(func)
-    return func
-end
-NoAttackAnimation = true
-local DmgAttack = game:GetService("ReplicatedStorage").Assets.GUI:WaitForChild("DamageCounter")
+
+waitForCombatFramework()
+
 local PC = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework.Particle)
 local RL = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib)
 local oldRL = RL.wrapAttackAnimationAsync
+
 RL.wrapAttackAnimationAsync = function(a, b, c, d, func)
-    if not NoAttackAnimation then
-        return oldRL(a, b, c, 60, func)
-    end
-    local Hits = {}
-    local Client = game.Players.LocalPlayer
-    local Characters = game:GetService("Workspace").Characters:GetChildren()
+if not NoAttackAnimation then
+return oldRL(a, b, c, 60, func)
+end
+end
+
+local Hits = {}
+local Client = game.Players.LocalPlayer
+local Characters = game:GetService("Workspace").Characters:GetChildren()
     for i, v in pairs(Characters) do
         local Human = v:FindFirstChildOfClass("Humanoid")
         if v.Name ~= game.Players.LocalPlayer.Name and Human and Human.RootPart and Human.Health > 0 and Client:DistanceFromCharacter(Human.RootPart.Position) < 65 then
