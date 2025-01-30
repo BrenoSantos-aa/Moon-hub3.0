@@ -1,7 +1,7 @@
 local function getExecutor()
     if is_arceus_x then
         return "Arceus X"
-    elseif is_delta then
+    elseif is_delta and is_delta == true then
         return "Delta"
     else
         return "Desconhecido"
