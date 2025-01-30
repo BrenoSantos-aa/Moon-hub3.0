@@ -1,20 +1,31 @@
-local exploit = getexecutorname or identifyexecutor
+local function getExecutor()
+if is_arceus_x then
+return "Arceus X"
+elseif is_delta == true then
+return "Delta"
+else
+return "Desconhecido"
+end
+end
+
+local exploit = getExecutor()
+
 local support = {
-    ["Fluxus"] = true,
-    ["Trigon"] = false,
-    ["Codex"] = true,
-    ["Delta"] = true,
-    ["Vega X"] = true,
-    ["Hydrogen"] = true,
-    ["alysse"] = false,
-    ["Arceus X"] = true,
-    ["Electron"] = false,
+["Fluxus"] = true,
+["Trigon"] = false,
+["Codex"] = true,
+["Delta"] = true,
+["Vega X"] = true,
+["Hydrogen"] = true,
+["alysse"] = false,
+["Arceus X"] = true,
+["Electron"] = false,
 }
 
-if support[exploit()] then
-    print("Correct Executor Let's Run uwu")
+if support[exploit] then
+print("Correct Executor Let's Run uwu")
 else
-    game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelaks")
+game.Players.LocalPlayer:Kick("Ko Hỗ Trợ Executor | Not Support Executor | Tidak Mendukung Pelak")
 end
     
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "KRNL" or SONA_LOADED and "Sona" or "Fluxus" or
