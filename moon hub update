@@ -1,11 +1,19 @@
-local function getExecutor()
-if is_arceus_x then
-return "Arceus X"
-elseif is_delta == true then
-return "Delta"
-else
-return "Desconhecido"
+    if is_arceus_x then
+        return "Arceus X"
+    elseif is_delta == true then
+        return "Delta"
+    else
+        return "Desconhecido"
+    end
 end
+
+local executor = getExecutor()
+
+if executor == "Desconhecido" then
+    game.Players.LocalPlayer:Kick("Executor não suportado!")
+else
+    print("Executor correto: " .. executor)
+    -- Continue seu script aqui
 end
 
 local exploit = getExecutor()
