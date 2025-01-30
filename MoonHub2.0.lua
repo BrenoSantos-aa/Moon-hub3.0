@@ -1,4 +1,14 @@
-local exploit = getexecutorname or identifyexecutor
+local function getExecutor()
+    -- Se você está usando o Arceus X, por exemplo
+    if is_arceus_x then
+        return "Arceus X"
+    elseif is_delta then
+        return "Delta"
+    else
+        return "Desconhecido"
+    end
+end
+local exploit = getExecutor
 local support = {
     ["Fluxus"] = true,
     ["Trigon"] = false,
