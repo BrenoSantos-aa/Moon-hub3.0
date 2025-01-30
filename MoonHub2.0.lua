@@ -1,5 +1,3 @@
-assim?
-
 local function getExecutor()
     if is_arceus_x then
         return "Arceus X"
