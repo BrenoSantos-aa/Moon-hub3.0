@@ -1,4 +1,4 @@
-      pcall(function() return repeat
+      pcall(function()repeat
 local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)
     local UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController", true)
     if UIController and ChooseTeam then
