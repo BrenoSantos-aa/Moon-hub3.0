@@ -1,18 +1,24 @@
+local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam")
+local UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController")
+
+print("ChooseTeam:", ChooseTeam)
+print("UIController:", UIController)
+
 if ChooseTeam and UIController and ChooseTeam.Visible then
-    repeat
-        for i, v in pairs(getgc()) do
-            if type(v) == "function" and getfenv(v).script == UIController then
-                local constant = getconstants(v)
-                if #constant == 1 and (constant[1] == "Pirates" or constant[1] == "Marines") then
-                    local teamToSelect = getgenv().Team or "Pirates"
-                    if constant[1] == teamToSelect then
-                        v(teamToSelect)
-                    end
-                end
-            end
-        end
-        wait(1)
-    until game.Players.LocalPlayer.Team
+repeat
+for i, v in pairs(getgc()) do
+if type(v) == "function" and getfenv(v).script == UIController then
+local constant = getconstants(v)
+if #constant == 1 and (constant[1] == "Pirates" or constant[1] == "Marines") then
+local teamToSelect = getgenv().Team or "Pirates"
+if constant[1] == teamToSelect then
+v(teamToSelect)
+end
+end
+end
+end
+wait(1)
+until game.Players.LocalPlayer.Team
 end
 
 repeat
