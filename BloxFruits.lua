@@ -1,3 +1,4 @@
+local Combat = require(game.ReplicatedStorage.Combat)
 local function main()
     local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)
     local UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController", true)
@@ -10450,4 +10451,5 @@ function FastAttackConnectorFunction()
     return ReturnFunctions
 end
 return FastAttackConnectorFunction()
+end
 pcall(main)
