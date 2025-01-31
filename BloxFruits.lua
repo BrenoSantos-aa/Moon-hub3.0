@@ -1,25 +1,19 @@
-      pcall(function()
-local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)
-    local UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController", true)
-    if UIController and ChooseTeam then
-        if ChooseTeam.Visible then
-            for i, v in pairs(getgc()) do
-                if type(v) == "function" and getfenv(v).script == UIController then
-                    local constant = getconstants(v)
-                    pcall(function()
-                        if (constant[1] == "Pirates" or constant[1] == "Marines") and #constant == 1 then
-                            local teamToSelect = getgenv().Team "Marines" or "Pirates"
-                            if constant[1] == teamToSelect then
-                                v(teamToSelect)
-                            end
-                        end
-                    end)
+if ChooseTeam and UIController and ChooseTeam.Visible then
+    repeat
+        for i, v in pairs(getgc()) do
+            if type(v) == "function" and getfenv(v).script == UIController then
+                local constant = getconstants(v)
+                if #constant == 1 and (constant[1] == "Pirates" or constant[1] == "Marines") then
+                    local teamToSelect = getgenv().Team or "Pirates"
+                    if constant[1] == teamToSelect then
+                        v(teamToSelect)
+                    end
                 end
             end
         end
-    end
-    wait(1)
-until game.Players.LocalPlayer.Team end)
+        wait(1)
+    until game.Players.LocalPlayer.Team
+end
 
 repeat
     wait()
