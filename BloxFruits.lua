@@ -1,5 +1,4 @@
-      pcall(function()
-            repeat
+      pcall(function() repeat
 local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)
     local UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController", true)
     if UIController and ChooseTeam then
@@ -9,7 +8,7 @@ local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChi
                     local constant = getconstants(v)
                     pcall(function()
                         if (constant[1] == "Pirates" or constant[1] == "Marines") and #constant == 1 then
-                            local teamToSelect = getgenv().Team or "Pirates"
+                            local teamToSelect = getgenv().Team "Marines" or "Pirates"
                             if constant[1] == teamToSelect then
                                 v(teamToSelect)
                             end
