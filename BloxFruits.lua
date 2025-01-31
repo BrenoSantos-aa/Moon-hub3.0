@@ -1,5 +1,22 @@
-pcall(function()repeat
-    local ChooseTeam = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ChooseTeam", true)
+local function waitFor(functionName)
+while not game:GetService(functionName) do
+wait(0.1)
+end
+end
+
+waitFor("Players")
+
+pcall(function()
+-- Inicie o restante do seu script aqui, começando logo após o pcall
+-- O código aqui é onde você iniciar todas as operações que dependem de Players
+-- Por exemplo:
+
+local playerGui = game.Players.LocalPlayer.PlayerGui
+local ChooseTeam = playerGui:FindFirstChild("ChooseTeam", true)
+local UIController = playerGui:FindFirstChild("UIController", true)
+
+-- ... E continue com o resto do seu código, começando logo após essas linhas
+end)
     local UIController = game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("UIController", true)
     if UIController and ChooseTeam then
         if ChooseTeam.Visible then
