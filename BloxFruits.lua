@@ -1,4 +1,4 @@
-local function waitFor(functionName)
+  local function waitFor(functionName)
   while not game:GetService(functionName) do
     wait(0.1)
   end
@@ -37,44 +37,36 @@ local function main()
     wait()
   until game.Players.LocalPlayer.Character
 
-  -- Rest of your script here
-  function MaterialMon()
-    if _G.SelectMaterial == "Radioactive Material" then
-        MMon = "Factory Staff"
-        MPos = CFrame.new(-507.7895202636719, 72.99479675292969, -126.45632934570312)
-        SP = "Bar"
-    elseif _G.SelectMaterial == "Mystic Droplet" then
-        MMon = "Water Fighter"
-        MPos = CFrame.new(-3214.218017578125, 298.69952392578125, -10543.685546875)
-        SP = "ForgottenIsland"
-    elseif _G.SelectMaterial == "Magma Ore" then
-        if game.PlaceId == 2753915549 then
-            MMon = "Military Spy"
-            MPos = CFrame.new(-5850.2802734375, 77.28675079345703, 8848.6748046875)
-            SP = "Magma"
-        elseif game.PlaceId == 4442272183 then
-            MMon = "Lava Pirate"
-            MPos = CFrame.new(-5234.60595703125, 51.953372955322266, -4732.27880859375)
-
-            SP = "CircleIslandFire"
-        end
-    elseif _G.SelectMaterial == "Angel Wings" then
-        MMon = "Royal Soldier"
-        MPos = CFrame.new(-7827.15625, 5606.912109375, -1705.5833740234375)
-        SP = "Sky2"
-    elseif _G.SelectMaterial == "Leather" then
-        if game.PlaceId == 2753915549 then
-            MMon = "Pirate"
-            MPos = CFrame.new(-1211.8792724609375, 4.787090301513672, 3916.83056640625)
-            SP = "Pirate"
-        elseif game.PlaceId == 4442272183 then
-            MMon = "Marine Captain"
-        end
-    end
-  end
-end
-
-pcall(main)
+                   unction MaterialMon()
+                   if _G.SelectMaterial == "Radioactive Material" then
+                                        MMon = "Factory Staff"
+                                        MPos = CFrame.new(-507.7895202636719, 72.99479675292969, -126.45632934570312)
+                                        SP = "Bar"
+                   elseif _G.SelectMaterial == "Mystic Droplet" then
+                                        MMon = "Water Fighter"
+                                        MPos = CFrame.new(-3214.218017578125, 298.69952392578125, -10543.685546875)
+                                        SP = "ForgottenIsland"
+                        elseif _G.SelectMaterial == "Magma Ore" then
+                            if game.PlaceId == 2753915549 then
+                                        MMon = "Military Spy"
+                                        MPos = CFrame.new(-5850.2802734375, 77.28675079345703, 8848.6748046875)
+                                        SP = "Magma"
+                        elseif game.PlaceId == 4442272183 then
+                                        MMon = "Lava Pirate"
+                                        MPos = CFrame.new(-5234.60595703125, 51.953372955322266, -4732.27880859375)
+                                        SP = "CircleIslandFire"
+                     end
+                        elseif _G.SelectMaterial == "Angel Wings" then
+                                        MMon = "Royal Soldier"
+                                        MPos = CFrame.new(-7827.15625, 5606.912109375, -1705.5833740234375)
+                                        SP = "Sky2"
+                         elseif _G.SelectMaterial == "Leather" then
+                             if game.PlaceId == 2753915549 then
+                                        MMon = "Pirate"
+                                        MPos = CFrame.new(-1211.8792724609375, 4.787090301513672, 3916.83056640625)
+                                        SP = "Pirate"
+                                elseif game.PlaceId == 4442272183 then
+                                        MMon = "Marine Captain"     
 					MPos = CFrame.new(-2010.5059814453125, 73.00115966796875, -3326.620849609375)
 					SP = "Greenb"
 				elseif game.PlaceId == 7449423635 then
@@ -10470,3 +10462,9 @@ function FastAttackConnectorFunction()
     return ReturnFunctions
 end
 return FastAttackConnectorFunction()
+     end
+    end
+  end
+end
+
+pcall(main)
