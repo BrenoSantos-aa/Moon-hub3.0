@@ -10450,9 +10450,3 @@ function FastAttackConnectorFunction()
     return ReturnFunctions
 end
 return FastAttackConnectorFunction()
-     end
-    end
-  end
-end
-
-pcall(main)
