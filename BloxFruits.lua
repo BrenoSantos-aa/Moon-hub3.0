@@ -2393,7 +2393,7 @@ function LPH_JIT_MAX(func)
 end
 NoAttackAnimation = true
 local DmgAttack = game:GetService("ReplicatedStorage").Assets.GUI:WaitForChild("DamageCounter")
-local PC = require(game.Players.LocalPlayer.PlayerScripts.CombatFramework.Particle)
+local PC = require(game.ReplicatedStorage.CombatFramework.Particle)
 local RL = require(game:GetService("ReplicatedStorage").CombatFramework.RigLib)
 local oldRL = RL.wrapAttackAnimationAsync
 RL.wrapAttackAnimationAsync = function(a, b, c, d, func)
